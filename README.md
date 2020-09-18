@@ -1,4 +1,5 @@
-# yaztokens-node-selector
+# yaztokens.js | yazTokens Javascript API
+
 
 Module for selecting a validator node
 
