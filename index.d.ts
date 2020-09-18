@@ -1,0 +1,39 @@
+import { Node, Report } from 'yaztokens-node'
+
+export interface NodeSelectorConfigs {
+  yazToken: {
+    name: string,
+    redeemFrom: string
+  },
+  defaultEndpoint?: string,
+  networkType: string | Promise<string>,
+  appName?: string
+}
+
+export interface NodeList extends Array<Node> {}
+
+export class NodeSelector {
+  constructor(_configs: NodeSelectorConfigs)
+
+  selectedNode: Node
+
+  nodes: NodeList
+
+  info: object
+
+  defaultEndpoint: string | null
+
+  networkType: string
+
+  checkConnection(_endpoint: string, _timeout?: number): Promise<boolean>
+
+  getApi(): Promise<object>
+
+  select(): Promise<Node>
+
+  setEndpoint(_endpoint: string): Node
+
+  getNetworkType(): Promise<string>
+
+  setNetworkType(_type: string): string
+}
