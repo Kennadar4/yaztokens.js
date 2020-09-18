@@ -1,0 +1,36 @@
+{
+  "name": "yaztokens-node-selector",
+  "version": "0.6.0",
+  "description": "repo holding the code for selecting validator nodes",
+  "repository": "https://github.com/provable-things/yaztokens.js/tree/master/packages/yaztokens-node-selector",
+  "main": "dist/yaztokens-node-selector.cjs.js",
+  "module": "dist/yaztokens-node-selector.esm.js",
+  "browser": "dist/yaztokens-node-selector.umd.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest --detectOpenHandles",
+    "lint": "npx eslint ./src --fix && npx eslint ./tests --fix",
+    "dtslint": "dtslint types --onlyTestTsNext"
+  },
+  "author": "tommydinnie@gmail.com @provable-things",
+  "license": "LGPL-3.0",
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "@types/node": "^12.6.1",
+    "axios": "^0.19.0",
+    "chai": "^4.2.0",
+    "yaztokens-node": "^0.6.0",
+    "yaztokens-utils": "^0.6.0",
+    "web3": "^1.2.6"
+  },
+  "devDependencies": {
+    "dtslint": "0.4.2",
+    "jest": "^24.8.0"
+  },
+  "files": [
+    "dist",
+    "types/index.d.ts"
+  ]
+}
